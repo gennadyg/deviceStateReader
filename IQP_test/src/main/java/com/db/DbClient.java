@@ -67,7 +67,7 @@ public class DbClient
 	      //Handle errors for JDBC
 	      Loggers.Service.errorWithTrace("Failed to execute SQL", se);
 	      
-	   }catch(Exception e)
+	   }catch( Exception e)
 	   {
 		   Loggers.Service.errorWithTrace("Failed to execute SQL", e );
 	   }
@@ -77,14 +77,14 @@ public class DbClient
    {
 	   try
 	      {
-	         if(conn!=null)
+	         if( conn != null )
 	         {
 	        	 conn.close();
 	         }
 	      
-	      }catch( SQLException se )
+	      }catch( Exception se )
 	      {
-	         se.printStackTrace();
+	    	  Loggers.Service.errorWithTrace("Failed to close connection", se );
 	      }//end fi
    }
 }

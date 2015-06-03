@@ -70,8 +70,7 @@ public class Application extends HttpAPI
 			
 		} catch ( Exception e) 
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Loggers.Service.errorWithTrace("Failed to execute IQP test", e);
 		}
 		
 	}
